@@ -28,12 +28,19 @@ sudo pacman -S --needed base-devel git curl linux-headers dkms
 
 Clone this repo
 ```
-git clone https://github.com/ProgrammingRainbow/Mercusys-MA530-rtl8761b-btusb
+git clone https://github.com/ProgrammingRainbow/mercusys-ma530-dkms
 ```
 
+Install using makepkg
+```
+cd mercusys-ma530-dkms
+makepkg -si
+```
+
+Or just install with dkms directly.
 Remove any old version then add and install. You should see it download 5 files from the offical linux project using your kernel version.
 ```
-sudo dkms remove Mercusys-MA530-rtl8761b-btusb/1.0 --all
-sudo dkms add ./Mercusys-MA530-rtl8761b-btusb
-sudo dkms install Mercusys-MA530-rtl8761b-btusb/1.0
+sudo dkms remove mercusys-ma530-dkms/1.0 --all
+sudo dkms add ./mercusys-ma530-dkms
+sudo dkms install mercusys-ma530-dkms/1.0
 ```
